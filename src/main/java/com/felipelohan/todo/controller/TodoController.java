@@ -24,7 +24,7 @@ public class TodoController {
     @PutMapping("/{id}")
     public TodoEntity update(@PathVariable("id") Integer id, @RequestBody TodoEntity todo){
         todo.setId(id);
-        return todoService.save(todo);
+        return todoService.update(todo);
     }
 
     @GetMapping
